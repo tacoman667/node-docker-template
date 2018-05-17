@@ -9,5 +9,5 @@ services:
       - '3000:3000'
     volumes:
       - .:/app
-    command: 'yarn start'
+    command: 'nodemon'
     entrypoint: ["/app/entrypoint.sh"]

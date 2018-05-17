@@ -10,6 +10,8 @@ RUN apk add --no-cache yarn
 RUN mkdir /node_modules
 WORKDIR /app
 
+RUN yarn global add nodemon
+
 COPY package.json .
 RUN yarn install
 
@@ -17,4 +19,4 @@ COPY . /app
 
 EXPOSE 3000
 
-CMD yarn start
+CMD nodemon
