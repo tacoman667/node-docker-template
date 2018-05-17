@@ -1,0 +1,13 @@
+version: '3.6'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: node-docker-template
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+    command: 'yarn start'
+    entrypoint: ["/app/entrypoint.sh"]
